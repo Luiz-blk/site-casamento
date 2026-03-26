@@ -18,10 +18,21 @@ function confirmarPresenca(){
         }
     }
 
+    alert("presença confirmada! 🎉")
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        ${nome}
+        <button onclick="removerConvidado(this)">❌</button>
+    `;
+
+    lista.appendChild(li);
+
     let novoConvidado = document.createElement("li");
     novoConvidado.textContent = nome;
     
-    lista.appendChild(novoConvidado);
+   
 
     document.getElementById("nomeConvidado").value = "";
 }
@@ -33,4 +44,8 @@ function confirmarPresenca(){
             confirmarPresenca()
         }
     });
+
+function removerConvidado(botao) {
+    botao.parentElement.remove();
+}
 

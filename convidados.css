@@ -14,26 +14,44 @@ header {
 }
 
 .container {
-    margin-top: 20px
+    margin-top: 20px;
+    padding: 50px;
 }
 
 input {
-    padding: 10px;
-    width:200px;
+    padding: 12px;
+    width:220px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
-     padding: 10px 20px;
+     padding: 12px 18px;
+     background: #d1b692;
+     color: white;
+     border: none;
+     border-radius: 8px;
      cursor: pointer;
 }
 
-.lista{
-    margin-top: 40px;
-    flex: 1;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-footer {
-    text-align: center;
-    font-size: small;
-    padding: 1rem;
+li {
+    background: #f1eae4;  
+    margin: 10px auto;  
+    padding: 12px;
+    width: 250px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button{
+    background: red;
+    padding: 5px 10px;
+    border-radius: 5px
 }
