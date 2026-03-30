@@ -1,7 +1,17 @@
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background:#fafafa;
+   
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("img.convidados.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,8 +24,14 @@ header {
 }
 
 .container {
-    margin-top: 20px;
+    margin: 40px auto;
     padding: 50px;
+    background: #f1eae4;
+    width: 90%;
+    max-width: 500px;
+
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 input {
@@ -23,6 +39,7 @@ input {
     width:220px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    
 }
 
 button {
@@ -37,17 +54,27 @@ button {
 ul {
     list-style: none;
     padding: 0;
+
+    overflow-y: auto;
+    max-height: 550px;
 }
+
+ul::-webkit-scrollbar{
+    width: 6px;
+}
+
+
 
 li {
     background: #f1eae4;  
     margin: 10px auto;  
     padding: 12px;
-    width: 250px;
+    width: 300px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 li button{
