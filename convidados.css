@@ -43,6 +43,7 @@ input {
 }
 
 button {
+    margin-top: 10px;
      padding: 12px 18px;
      background: #d1b692;
      color: white;
@@ -69,7 +70,7 @@ li {
     background: #f1eae4;  
     margin: 10px auto;  
     padding: 12px;
-    width: 300px;
+    width: 400px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
