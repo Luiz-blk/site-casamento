@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="informacoes.css">
+    <link rel="stylesheet" href="style.css">
     <title>informações</title>
 </head>
 <body>
 
     <header>
-        Informações do Evento
+        <div id="menu-container"></div>
+        <h1>Informações do Evento</h1>
     </header>
 
      <section class = 'info-container'>
@@ -39,7 +41,7 @@
                 <li>Prato Principal</li>
                 <li>Sobremesa</li>
                 <li>Open Bar</li>
-                <li><a href="https://www.buffetefraim.com.br/cardapios/" target="_blank" rel="noopener noreferrer">Clique aqui</a></li>
+                <li><a id="linkBuffet" href="https://www.buffetefraim.com.br/cardapios/" target="_blank" rel="noopener noreferrer">Clique aqui</a></li>
             </ul>
         </div>
      </section>
@@ -53,5 +55,8 @@
             window.location.href = 'index.html'
         }
      </script>
+
+    <script src="menu.js"></script>
+     
 </body>
 </html>

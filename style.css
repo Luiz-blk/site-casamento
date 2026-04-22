@@ -2,131 +2,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} /*evita bugs de espaçamento*/
-
-body {
-    font-family: 'georgia', serif;
-    background: #f8f5f2;
-}
-
-/*Hero*/
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("casamento.png") center/cover;
-    color: white;
-    text-align: center;
-
-}
-
-
-.hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 70px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-
-.hero p {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    margin-top: 10px;
 }
 
 header {
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-    font-weight: 900;
-    color: rgb(0, 0, 0);
-    font-size: 25px;
+    color: white;
 }
 
-@keyframes fadeUp{
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    } to {
-        opacity: 1;
-        transform: translateY(0);
+body {
+    font-family: 'georgia', serif;
+    margin: 0;
+    padding-top: 80px; /* espaço pro menu */
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+
+    padding: 20px 40px;
+
+    background:  rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px); /*efeito de vidro*/
+
+    z-index: 1000;  /* garante que fique acima */
+}
+
+/*logo*/
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*botão hamburguer*/
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/*mobile*/
+@media (max-width: 750px){
+    .menu-toggle{
+        display: block;/*aparece no celular*/
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
     }
 }
 
-
-.conteudo {
-
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-
-    opacity: 0;
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 0.5s;
-}
-
-.conteudo p {  
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-}
-
-.data, .horario {
-    font-style: italic;
-}
-
-.botoes {
+/*menu*/
+.menu{
     display: flex;
-    gap: 60px;
-    justify-content: center;
-    margin: 60px 0;
-  
-    opacity: 0;
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 1s;
+    gap: 25px;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
 }
 
-.btt {
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgb(219, 196, 164);
-    color: #555;
+.menu a {
+    text-decoration: none;
+    color: white;
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
+    transition: 0.3s;
 }
 
-.btt::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    border-radius: 50%;
-     background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.btt:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    color: black;
-}
-
-.btt:hover::before {
-    opacity: 1;
+.menu a:hover{
+    color: #d3d3d3;
 }

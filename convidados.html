@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convidados</title>
     <link rel="stylesheet" href="convidados.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        Confirmação de Presença
+        <div id="menu-container"></div>
+
+        <h1>Confirmação de Presença</h1>
     </header>
 
     <section class="container">
@@ -27,10 +30,18 @@
 
         <h2>Lista de Confirmados</h2>
 
-        <ul id="listaConvidados"></ul>
+        <ul id="listaConvidados">
+            <template id="templateConvidado">
+                <li id="li">
+                    <span class="nome"></span>
+                    <button class="remover">❌</button>
+                </li>
+            </template>
+        </ul>
 
     </section>
 
     <script src="convidados.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

@@ -20,32 +20,26 @@ function confirmarPresenca(){
 
     alert("presença confirmada! 🎉")
 
-    let li = document.createElement("li");
+    let template = document.getElementById("templateConvidado");
+    let clone = template.content.cloneNode(true);
 
-    li.innerHTML = `
-        ${nome}
-        <button onclick="removerConvidado(this)">❌</button>
-    `;
+    // coloca o nome
+    clone.querySelector(".nome").textContent = nome;
 
-    lista.appendChild(li);
+    // botão de remover
+    clone.querySelector(".remover").onclick = function() {
+    this.parentElement.remove();
+    };
 
-    let novoConvidado = document.createElement("li");
-    novoConvidado.textContent = nome;
-    
-   
-
-    document.getElementById("nomeConvidado").value = "";
+    // adiciona na lista
+    lista.appendChild(clone);
 }
 
-//evento para confirmar enter
-  document.getElementById("nomeConvidado").addEventListener("keydown", function(event){
+ //acão da tecla enter
+    document.getElementById("nomeConvidado").addEventListener("keydown", function(event){
 
         if(event.key === "Enter"){
             confirmarPresenca()
         }
     });
-
-function removerConvidado(botao) {
-    botao.parentElement.remove();
-}
 

@@ -1,0 +1,113 @@
+
+body {
+    font-family: 'georgia', serif;
+    background: #f8f5f2;
+    
+}
+
+/*Hero*/
+
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("casamento.png") no-repeat center/cover;
+    color: white;
+    position: relative;
+}
+
+/*Barra de navegação*/
+
+
+/*texto central*/
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text p {
+    font-size: 19px;
+}
+
+@keyframes fadeUp{
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.conteudo {
+
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.conteudo p {  
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.data, .horario {
+    font-style: italic;
+}
+
+.botoes {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 60px 0;
+  
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.btt {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(219, 196, 164);
+    color: #555;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.btt::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+     background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btt:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    color: black;
+}
+
+.btt:hover::before {
+    opacity: 1;
+}
