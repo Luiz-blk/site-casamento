@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="../assets/css/components/menu.css">
     <link rel="stylesheet" href="../assets/css/pages/convidados.css">
 </head>
-<body>
+<body class="bg-overlay">
     
     <header>
         <div id="menu-container"></div>
 
-        <h1 id="h1">Confirmação de Presença</h1>
+        <h1 class="title">Confirmação de Presença</h1>
     </header>
 
     <section class="container">
@@ -22,7 +22,7 @@
 
         <input type="text" id="nomeConvidado" placeholder="Digite seu nome">
 
-        <button id="botao" onclick="confirmarPresenca()">
+        <button class="botao" onclick="confirmarPresenca()">
             Confirmar
         </button>
 
@@ -32,9 +32,9 @@
 
         <h2>Lista de Confirmados</h2>
 
-        <ul id="listaConvidados">
+        <ul class="listaConvidados">
             <template id="templateConvidado">
-                <li id="li">
+                <li class="lista-items">
                     <span class="nome"></span>
                     <button class="remover">❌</button>
                 </li>
