@@ -1,10 +1,9 @@
 //Menu
 document.addEventListener("DOMContentLoaded", () => {
+    
+    const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
 
-    // ======================
-    // MENU
-    // ======================
-    fetch("../components/menu.html")
+    fetch(basePath + "components/menu.html")
     .then(response => {
         if (!response.ok) {
             throw new Error("Erro ao carregar menu");
@@ -38,10 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Menu:", err));
 
 
-    // ======================
     // FOOTER
-    // ======================
-    fetch("../components/footer.html")
+  
+    fetch(basePath + "components/footer.html")
     .then(response => {
         if (!response.ok) {
             throw new Error("Erro ao carregar footer");
