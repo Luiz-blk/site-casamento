@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/components/menu.css">
     <link rel="stylesheet" href="../assets/css/pages/convidados.css">
+    <link rel="stylesheet" href="../assets/css/components/footer.css">
 </head>
 <body class="bg-overlay">
     
-    <header>
+    <main>
+        <header>
         <div id="menu-container"></div>
 
         <h1 class="title">Confirmação de Presença</h1>
@@ -32,18 +34,22 @@
 
         <h2>Lista de Confirmados</h2>
 
-        <ul class="listaConvidados">
-            <template id="templateConvidado">
+        <ul id="listaConvidados"></ul>
+
+        <template id="templateConvidado">
                 <li class="lista-items">
                     <span class="nome"></span>
                     <button class="remover">❌</button>
                 </li>
             </template>
-        </ul>
 
     </section>
+    </main>
 
-    <script src="../assets/js/convidados.js"></script>
+    <div id="footer-container"></div>
+
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/convidados.js"></script>
+    
 </body>
 </html>

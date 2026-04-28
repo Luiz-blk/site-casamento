@@ -58,14 +58,16 @@
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 1.6;
-    color: #444;
+    color: #ececec;
 }
 
-.data{
+.hero-text .data{
     font-family: 'Great Vibes', cursive;
-    font-size: 36px;
+    font-size: 32px;
+    margin: 15px 0;
+    letter-spacing: 1px;
 }
 
-.frase {
+.hero-text .frase {
      font-family: 'Playfair Display', serif;
 }

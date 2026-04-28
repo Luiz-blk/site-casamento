@@ -1,34 +1,56 @@
-fetch("../components/menu.html")
-.then(response => {
-    if (!response.ok) {
-        throw new Error ("Erro ao carregar menu");
-    }
-    return response.text();
-})
+//Menu
+document.addEventListener("DOMContentLoaded", () => {
 
-.then(data => {
-    // injetamos o menu
-    document.getElementById("menu-container").innerHTML = data;
+    // ======================
+    // MENU
+    // ======================
+    fetch("../components/menu.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro ao carregar menu");
+        }
+        return response.text();
+    })
+    .then(data => {
+        // injeta o menu
+        document.getElementById("menu-container").innerHTML = data;
 
-    //pegando elementos
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+        // pega elementos depois que o menu existe
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
 
-    //verifica se exitem
-    if (toggle && menu){
-    
-    //abre e fecha menu
-    toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    });
+        if (toggle && menu) {
+            // abre/fecha menu
+            toggle.addEventListener("click", () => {
+                menu.classList.toggle("active");
+            });
 
-    //fecha quando clicar nos links
-    const links = document.querySelectorAll("#menu a");
+            // fecha ao clicar em links
+            const links = document.querySelectorAll("#menu a");
 
-    links.forEach(link=> {
-        link.addEventListener("click", () => {
-            menu.classList.remove("active");
-        });
-    });
-}
+            links.forEach(link => {
+                link.addEventListener("click", () => {
+                    menu.classList.remove("active");
+                });
+            });
+        }
+    })
+    .catch(err => console.error("Menu:", err));
+
+
+    // ======================
+    // FOOTER
+    // ======================
+    fetch("../components/footer.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro ao carregar footer");
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+    })
+    .catch(err => console.error("Footer:", err));
+
 });

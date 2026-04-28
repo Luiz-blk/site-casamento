@@ -33,9 +33,12 @@ body {
     justify-content: space-between;
     align-items:center ;
 
-    padding: 27px 40px;
+    background:  rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    background:  rgba(0, 0, 0);
+    padding: 27px 40px;
+    border-bottom: 1px;
 
     z-index: 1000;  /* garante que fique acima */
 }
@@ -66,7 +69,7 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: rgb(238, 236, 236);
+    color: white;
     font-weight: bold;
     transition: 0.3s;
 }

@@ -6,11 +6,22 @@
 
 body {
     font-family: Georgia, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+#footer-container{
+    margin-top: auto;
 }
 
 .bg-overlay{
     background: 
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
         url("../img/img.convidados.png");
 
     background-size: cover;

@@ -1,0 +1,29 @@
+.footer {
+    text-align: center;
+    padding: 20px 0;
+
+    background: rgb(255, 255, 255, 0.08);
+    backdrop-filter: bluer(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid  rgba(255, 255, 255, 0.2);
+
+    color: white;
+}
+
+.footer-frase {
+    font-size: 16px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.footer-nomes {
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.footer-data {
+    font-size: 14px;
+    opacity: 0.7;
+}
