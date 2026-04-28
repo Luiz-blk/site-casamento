@@ -42,10 +42,9 @@
 }
 
 .conteudo {
-
     max-width: 900px;
     margin: 0 auto 30px;
-    padding: 0 20px;
+    margin-top: 80px;
 
     opacity: 0;
     animation: fadeUp 1s ease forwards;
@@ -55,11 +54,13 @@
 .conteudo p {
     
     text-align: center;
-    margin-bottom: 20px;
+    margin: 6px 0;
     font-size: 18px;
+
     line-height: 1.6;
     color: #ececec;
 }
+
 
 .hero-text .data{
     font-family: 'Great Vibes', cursive;
@@ -70,4 +71,14 @@
 
 .hero-text .frase {
      font-family: 'Playfair Display', serif;
+}
+
+.text1 {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.text2 {
+    margin-top: 0;
+    opacity: 0.9;
 }
