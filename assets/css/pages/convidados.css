@@ -1,11 +1,10 @@
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
    
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("../../assets/img/img.convidados.png");
+        url("../../img/img.convidados.png");
 
     background-size: cover;
     background-position: center;

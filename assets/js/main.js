@@ -1,4 +1,4 @@
-fetch("menu.html")
+fetch("../components/menu.html")
 .then(response => {
     if (!response.ok) {
         throw new Error ("Erro ao carregar menu");
