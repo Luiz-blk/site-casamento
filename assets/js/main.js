@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // MENU
-    fetch("/components/menu.html")
+    fetch("./components/menu.html")
         .then(res => {
             if (!res.ok) throw new Error("Erro ao carregar menu");
             return res.text();
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Menu:", err));
 
     // FOOTER
-    fetch("/components/footer.html")
+    fetch("./components/footer.html")
         .then(res => {
             if (!res.ok) throw new Error("Erro ao carregar footer");
             return res.text();
