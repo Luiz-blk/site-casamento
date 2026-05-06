@@ -1,19 +1,5 @@
 
-/*Hero*/
 
-
-.bg-overlay {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("/site-casamento/assets/img/casamento.png") no-repeat center/cover;
-    
-    color: white;
-
-}
 
 /*Barra de navegação*/
 

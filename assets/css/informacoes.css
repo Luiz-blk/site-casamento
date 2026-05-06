@@ -1,17 +1,4 @@
-.bg-overlay {
 
-     text-align: center;
-   
-    background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("/site-casamento/assets/img/casamento.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-}
 
 #h1 {
     margin-top: 60px;
