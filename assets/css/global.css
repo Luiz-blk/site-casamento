@@ -22,7 +22,7 @@ main {
 .bg-overlay{
     background: 
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
-        url("../img/img.convidados.png");
+        url("/site-casamento/assets/img/img.convidados.png");
 
     background-size: cover;
     background-position: center;

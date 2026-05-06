@@ -9,7 +9,7 @@
     justify-content: space-between;
 
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("../../img/casamento.png") no-repeat center/cover;
+    url("/site-casamento/assets/img/casamento.png") no-repeat center/cover;
     
     color: white;
 
