@@ -2,12 +2,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Detecta o base path automaticamente para funcionar local e no GitHub Pages
-    const base = document.querySelector('base')?.href || '/';
-    const isPages = window.location.hostname.includes('github.io');
-    const basePath = isPages ? '/site-casamento' : '';
+    
+    const isGitHubPages = window.location.hostname.includes("github.io");
+    const isInPageFolder = window.location.pathname.includes("/pages/");
+
+    const basePath = isGitHubPages ? "/site-casamento/" : isInPageFolder 
+    ? "../" : "./";
 
     // MENU
-    fetch(`${basePath}/components/menu.html`)
+    fetch(`${basePath}components/menu.html`)
         .then(res => {
             if (!res.ok) throw new Error("Erro ao carregar menu");
             return res.text();
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Menu:", err));
 
     // FOOTER
-    fetch(`${basePath}/components/footer.html`)
+    fetch(`${basePath}components/footer.html`)
         .then(res => {
             if (!res.ok) throw new Error("Erro ao carregar footer");
             return res.text();
