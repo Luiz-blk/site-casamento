@@ -46,4 +46,35 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Footer:", err));
 
+        
+
+        fetch(`${basePath}components/countdown.html`)
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById("countdown-container").innerHTML = data;
+            iniciarContagem(); // inicia só depois que o HTML foi injetado
+  });
+
+    function iniciarContagem() {
+        const WEDDING = new Date("2028-03-20 16:00:00");
+
+        function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+
+        function tick() {
+            const diff = WEDDING - new Date();
+            if (diff <= 0) {
+                document.querySelector('.cr-grid').innerHTML = '<p>Hoje é o grande dia!</p>';
+                return;
+            }
+                document.getElementById('cr-dias').textContent  = pad(diff / 86400000);
+                document.getElementById('cr-horas').textContent = pad((diff % 86400000) / 3600000);
+                document.getElementById('cr-min').textContent   = pad((diff % 3600000) / 60000);
+                document.getElementById('cr-seg').textContent   = pad((diff % 60000) / 1000);
+            }
+
+            tick();
+            setInterval(tick, 1000);
+        }
+
 });
+
